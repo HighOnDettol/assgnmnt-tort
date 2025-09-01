@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law of Torts Assignment Cover Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --accent-color: #999;
+            --text-color: #222;
+            --bg-color: #f8f8f8;
+            --border-color: #555;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cover-page {
+            width: 21cm;
+            min-height: 29.7cm;
+            background: white;
+            padding: 2.5cm 3cm;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 5px double var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .decorative-border-top {
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .header {
+            margin-bottom: 2cm;
+        }
+
+        .university-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+        .college-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 50%;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin: 20px auto;
+        }
+
+        .assignment-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-top: 2cm;
+            margin-bottom: 1.5cm;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .details {
+            text-align: left;
+            margin: 0 auto;
+            width: 80%;
+            line-height: 1.8;
+            font-size: 1.2em;
+        }
+
+        .details-group {
+            margin-bottom: 1em;
+        }
+
+        .label {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .value {
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        .professor-section {
+            margin-top: 2cm;
+            text-align: right;
+            width: 80%;
+            margin-left: auto;
+            font-size: 1.2em;
+        }
+
+        .prominent-professor-section {
+            text-align: center;
+            padding: 15px 20px;
+            border-top: 2px dashed #999;
+            border-bottom: 2px dashed #999;
+            margin: 2cm auto 0;
+            width: 70%;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 3cm;
+            font-size: 1em;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 4em;
+            opacity: 0.05;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            z-index: -1;
+            user-select: none;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+            .cover-page {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                min-height: 100vh;
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover-page">
+    <div class="logo-text">LAW</div>
+    <div class="header">
+        <h2 class="university-name">Rashtrasant Tukadoji Maharaj Nagpur University</h2>
+        <h1 class="college-name">Dr. Babasaheb Ambedkar School of Law</h1>
+        <div class="divider"></div>
+    </div>
+    
+    <h2 class="assignment-title">
+        Assignment on Law of Torts
+    </h2>
+    
+    <div class="details">
+        <div class="details-group">
+            <span class="label">Submitted By:</span>
+        </div>
+        <div class="details-group">
+            <span class="label">Name:</span>
+            <span class="value">Indrakshi Saha</span>
+        </div>
+        <div class="details-group">
+            <span class="label">Roll No:</span>
+            <span class="value">39</span>
+        </div>
+        <div class="details-group">
+            <span class="label">Programme:</span>
+            <span class="value">BALLB 5 Yrs, 3rd Semester</span>
+        </div>
+    </div>
+
+    <div class="prominent-professor-section">
+        <div class="details-group">
+            <span class="label">Submitted To:</span>
+            <br>
+            <span class="value">Prof. Dinesh Sahare Sir</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="academic-year"></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Set the academic year dynamically
+        const currentYear = new Date().getFullYear();
+        document.getElementById('academic-year').innerText = `Academic Year: ${currentYear - 1}-${currentYear}`;
+    });
+</script>
+
+</body>
+</html>
