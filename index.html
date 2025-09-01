@@ -148,6 +148,26 @@
             user-select: none;
         }
 
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .print-button:hover {
+            background-color: var(--secondary-color);
+        }
+
         @media print {
             body {
                 background: none;
@@ -209,6 +229,8 @@
         <p id="academic-year"></p>
     </div>
 </div>
+
+<button class="print-button" onclick="window.print()">Download as PDF</button>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
